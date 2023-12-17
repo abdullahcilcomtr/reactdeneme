@@ -4,11 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function Car(props){ 
+return <h2>I am a {props.brand}</h2>
+}
+function Garage(){
+  return(
+    <>
+    <h1>Who lives in my Garage?</h1>
+    <Car brand="ford"/>
+    </>
+  );
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ <Garage/>
 );
 
 // If you want to start measuring performance in your app, pass a function
